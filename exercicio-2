@@ -1,0 +1,33 @@
+contador digital
+
+#include <stdio.h>
+int main (){
+	float opcao1 = 2.00;
+	float opcao2 = 1.00;
+	float opcao3 = 0.50;
+	float total = 0.0;
+	int escolha = -1;
+	
+	while (escolha !=0){
+		printf ("escolha uma das opcoes que voce deseja inserir: \n");
+		printf ("op1 \n");
+		printf ("op2 \n");
+		printf ("op3\n");
+		printf ("0 pra encerrar \n");
+		scanf ("%d", &escolha);
+		
+		if (escolha == 1){
+			total = total + opcao1;
+			printf ("adicionando R$2.00: %.2f \n", opcao1);
+		}else if (escolha == 2){
+			total = total + opcao2;
+			printf ("adicionando R$1.00: %.2f \n", opcao2);
+		}else if (escolha == 3){
+			total = total + opcao3;
+			printf ("adicionando R$0.50: %.2f \n", opcao3);
+		}else if (escolha == 0){
+			printf ("programa encerrado \n");
+		}
+		printf ("o total é: %.2f", total);
+	}
+}

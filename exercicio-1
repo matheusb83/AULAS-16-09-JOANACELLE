@@ -1,0 +1,23 @@
+//cosumo da água do morador:
+
+#include <stdio.h>
+int main (){
+	float consumo;
+	float consumo_geral;
+	float soma = 0.0;
+	int i;
+	
+	for (i=0; i<5; i++){
+		printf("digite o consumo de cada morador: %d \n", i);
+		scanf ("%f", &consumo);
+		soma = soma + consumo;
+		
+		if (consumo <=20.0){
+			printf ("o consumo está na media:\n");
+		}else{
+			printf("está a cima da media \n");
+		}
+	}
+	consumo_geral = soma / 5.0 ;
+	printf ("a media do predio é: %f", consumo_geral);
+}

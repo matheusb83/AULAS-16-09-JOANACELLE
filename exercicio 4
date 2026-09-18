@@ -1,0 +1,18 @@
+// esse aqui eu empenhei de verdade, mas fiquei preso nele por um tempo por causa de uma linha. depois de 1 hora tentando eu fui pro gtp:(
+
+
+#include <stdio.h>
+int main (){
+	int passos;
+	int horas = 0;
+	int total = 0;
+	
+	for (horas = 0; total <10000; horas ++){
+		printf ("digite os passos %d \n", horas);
+		scanf ("%d", &passos);
+		total = total + passos;	
+		}
+	printf("o programa foi encerrado. \n");
+	printf ("foi necessario %d", horas);
+	}
+

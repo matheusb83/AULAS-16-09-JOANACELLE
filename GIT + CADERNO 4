@@ -1,1 +1,33 @@
-
+// quantidade positivo e negativo e a soma de todos.
+#include <stdio.h>
+int main(){
+	int numero;
+	int opcao = -1;
+	int positivo = 0;
+	int negativo = 0;
+	int qtpositivo = 0;
+	int qtnegativo = 0;
+	int neutro = 0;
+	int soma;
+	
+	
+	while (opcao != 0){
+		printf ("digite um numero: \n");
+		scanf ("%d", &numero);
+		if (numero > 0){
+			positivo += numero;
+			qtpositivo++;
+		}else if (numero < 0){
+			negativo += numero;
+			qtnegativo++;
+		}else if (numero == 0){
+			neutro++;
+		}
+		printf ("deseja encerrar? 0-sim / 1-nao: \n");
+		scanf ("%d", &opcao);		
+	} printf ("soma dos positivos: %d \n", positivo);
+	printf ("soma dos negativos: %d \n", negativo);
+	printf ("quantidade positivos: %d\n", qtpositivo);
+	printf ("quantidade negativos: %d \n", qtnegativo);
+	
+}        

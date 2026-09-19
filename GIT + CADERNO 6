@@ -1,1 +1,39 @@
+// numeros primos.
 
+#include <stdio.h>
+
+int main() {
+    int numero;
+    int i;
+    int primo;
+    char opcao;
+
+    do {
+        printf("Digite um numero inteiro positivo: ");
+        scanf("%d", &numero);
+
+        if (numero <= 1) {
+            primo = 0;
+        } else {
+            primo = 1;
+            for (i = 2; i < numero; i++) {
+                if (numero % i == 0) {
+                    primo = 0;
+                    break;
+                }
+            }
+        }
+
+        if (primo) {
+            printf("O numero %d e PRIMO.\n", numero);
+        } else {
+            printf("O numero %d NAO e primo.\n", numero);
+        }
+
+        printf("\nDeseja testar outro numero? (S/N): ");
+        scanf(" %c", &opcao);
+
+    } while (opcao == 'S' || opcao == 's');
+
+    return 0;
+}

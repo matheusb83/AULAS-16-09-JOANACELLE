@@ -1,1 +1,27 @@
-
+// mostrar e calcular o maior e o menor numero.
+#include <stdio.h>
+int main(){
+	int numero;
+	int i = 0;
+	int diferenca;
+	int maior;
+	int menor;
+	
+	maior = numero;
+	menor = numero;
+	
+	for (i=0; i<10; i++){
+		printf ("digite um numero:");
+		scanf ("%d", &numero);
+		if (numero > maior){
+			maior = numero;
+		}if (numero < menor){
+			menor = numero;
+		}
+		diferenca = maior - menor;
+	} printf ("\n a diferença entre os numeros e de: %d \n", diferenca);
+	printf ("o maior numero e:  %d \n", maior);
+	printf( "o menor numero e: %d \n", menor);
+	
+	
+}

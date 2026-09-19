@@ -1,1 +1,41 @@
+// mostrar e calcular media do aluno, aprovado, reprovado ou recuperação.
+#include <stdio.h>
+int main (){
+	float n1, n2, n3;
+	char aluno [50];
+	float media;
+	int opcao = -1;
+	int aprovados = 0;
+	int recuperacao = 0;
+	int reprovados = 0;
+	
+	while (opcao != 0){
+		printf ("digite o nome do aluno: \n");
+		scanf ("%s", aluno);
+		
+		printf ("digite as notas do aluno:  %.2f \n");
+		scanf ("%f", &n1);
+		scanf ("%f", &n2);
+		scanf ("%f", &n3);
+		
+		media = (n1 + n2 + n3)/3 ;
+		printf ("a media do aluno:  %.2f \n", media);
+		
+		if (media >=7){
+			printf ("aprovado \n");
+			aprovados++;
+		}else if (media >=5 && media <= 6.9){
+			printf ("recuperacao \n");
+			recuperacao++;
+		}else{
+			printf ("reprovadissimo\n");
+			reprovados++;
+		}
+		printf ("deseja cadastrar outro aluno? 1-sim / 2-nao: \n");
+		scanf ("%d", &opcao);
+	}
+	printf ("aprovados: %d", aprovados);
+	printf ("recuperação: %d", recuperacao);
+	printf ("reprovados: %d", reprovados);
+}
 

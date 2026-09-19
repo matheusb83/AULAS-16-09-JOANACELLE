@@ -1,1 +1,20 @@
-
+// ler 10 numeros e dar as quatidades impares e pares
+	#include <stdio.h>
+	int main (){
+		int numero;
+		int par = 0;
+		int impar = 0;
+		int i = 0;
+		
+		for (i=0; i<10; i++){
+			printf ("digite o numero desejado; %d \n", i + 1);
+			scanf ("%d", &numero);
+			if (numero % 2 == 0){
+				par = par + 1;
+			} else{
+				impar = impar + 1;
+			}
+		} 
+		printf ("a quantidade de numeros pares: %d \n", par);
+		printf ("a quantidade de numeros impares: %d \n", impar);
+	}
